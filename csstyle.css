@@ -1,0 +1,27 @@
+.dynamic,.ht,.httext
+{
+position:absolute;
+font-family:"Bradley Hand ITC";
+}
+
+div.dynamic,div.httext
+{
+top:130px;
+left:400px;
+}
+div.httext
+{
+visibility:hidden;
+}
+
+.next
+{
+position:relative;
+left:85px;
+}
+
+div.ht
+{
+top:180px;
+left:400px;
+}
