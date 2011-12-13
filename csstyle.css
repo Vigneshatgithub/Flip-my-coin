@@ -14,10 +14,25 @@ div.httext
 visibility:hidden;
 }
 
-.next
+.next,.textclick
 {
 position:relative;
+}
+.next
+{
 left:85px;
+}
+
+img,.textclick
+{
+cursor:pointer;
+}
+
+.textclick
+{
+left:-70px;
+font-family:"Calibri";
+color:red;
 }
 
 div.ht
