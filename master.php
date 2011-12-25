@@ -4,6 +4,12 @@
 Yellow Duck
 </title>
 </head>
-<body>
+<body class="master">
+<div class="alert">
+<?php
+// $MESSAGE="Howdy";
+// echo $MESSAGE;
+?>
+</div>
 </body>
 </html>

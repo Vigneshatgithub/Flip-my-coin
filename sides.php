@@ -1,5 +1,11 @@
 <?php 
 	require("master.php");
+	if(empty($_POST["mindtext"]))
+	{
+		echo 'Unauthorized access identified. Please <a href="http://localhost/yellowduck/">Go Back</a> and recheck your link';
+	}
+	else
+	{
 ?>
 <html>
 <head>
@@ -33,6 +39,7 @@ $(document).ready(function(){
 });
 
 </script>
+<script language="javascript" type="text/javascript" src="checks.js"></script>
 </head>
 <body>
 <?php
@@ -53,17 +60,23 @@ $mindtext=$_POST["mindtext"];
 
 </div>
 <div class="httext">
-<form method="post" action="prob.php">
+<form method="post" action="prob.php" onsubmit="return checkInputs(document.getElementById('httext').value)">
 <table>
 <tr><td><h1><label id="userchosen"><label></h1></td></tr>
-<tr><td><textarea rows="7" cols="50" maxlength="200" autofocus="autofocus" name="httext" required="required"></textarea></td></tr>
+<tr><td><textarea rows="7" cols="50" maxlength="200" autofocus="autofocus" name="httext" required="required" id="httext"></textarea></td></tr>
 <tr>
 <td><input type="image" src="images/clicknext.png" class="next" /></td>
 <td><h5 class="textclick">choose again?</h5></td>
 </tr>
 <tr><td><input id="ucid" type="hidden" name="userchoice" /></td></tr>
+<?php
+echo "<tr><td><input type='hidden' name='mindtext2' value='".$mindtext."'></input></td></tr>";
+?>
 </table>
 </form>
 </div>
 </body>
 </html>
+<?php
+}
+?>

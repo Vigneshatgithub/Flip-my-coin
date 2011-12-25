@@ -1,15 +1,28 @@
-.dynamic,.ht,.httext
+.dynamic,.ht,.httext,.intheair
 {
 position:absolute;
 font-family:"Bradley Hand ITC";
 }
+div.event
+{
+position:absolute;
+font-family:"Lucida Console";
+border-style:dashed;
+padding:25px 50px;
+}
 
-div.dynamic,div.httext
+div.dynamic,div.httext,div.intheair
 {
 top:130px;
 left:400px;
 }
-div.httext
+div.event
+{
+top:130px;
+left:300px;
+width:600px;
+}
+div.httext,div.event
 {
 visibility:hidden;
 }
@@ -30,7 +43,7 @@ cursor:pointer;
 
 .textclick
 {
-left:-70px;
+left:-80px;
 font-family:"Calibri";
 color:red;
 }
@@ -39,4 +52,20 @@ div.ht
 {
 top:180px;
 left:400px;
+}
+
+body.master
+{
+background-image:url('images/inback2.png');
+}
+
+label.grandresult
+{
+font-size:xx-large;
+color:green;
+}
+label.grand
+{
+font-size:large;
+color:#3D9999;
 }
