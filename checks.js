@@ -8,4 +8,4 @@ function checkInputs(chkvalue)
 		{		
 			return true;
 		}
-}
+};

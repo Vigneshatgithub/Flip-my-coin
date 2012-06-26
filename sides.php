@@ -11,9 +11,13 @@
 <head>
 <link rel="stylesheet" type="text/css" href="csstyle.css" />
 <script type="text/javascript" src="jquery.js"></script>
+<script language="javascript" type="text/javascript" src="checks.js"></script>
 <script type="text/javascript">
+
 var msg="What  if  ";
 $(document).ready(function(){
+$("div.design-straight").css("visibility","hidden");
+$("div.design-slant").css("visibility","hidden");
   $("img.chead").click(function(){    
     $("div.httext").css("visibility","visible");
     $("div.ht").css("visibility","hidden");
@@ -25,6 +29,8 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("img.ctail").click(function(){    
     $("div.httext").css("visibility","visible");
+    $("div.design-straight").css("visibility","visible");
+    $("div.design-slant").css("visibility","visible");
     $("div.ht").css("visibility","hidden");
 	document.getElementById("userchosen").innerHTML=msg+"Tails";
 	document.getElementById("ucid").value="Tails";
@@ -35,6 +41,8 @@ $(document).ready(function(){
   $("h5.textclick").click(function(){    
     $("div.httext").css("visibility","hidden");
     $("div.ht").css("visibility","visible");	
+    $("div.design-straight").css("visibility","hidden");
+    $("div.design-slant").css("visibility","hidden");	
   });
 });
 
@@ -59,11 +67,13 @@ $mindtext=$_POST["mindtext"];
 </table>
 
 </div>
+<div class="design-straight"></div>
+<div class="design-slant"></div>
 <div class="httext">
 <form method="post" action="prob.php" onsubmit="return checkInputs(document.getElementById('httext').value)">
 <table>
 <tr><td><h1><label id="userchosen"><label></h1></td></tr>
-<tr><td><textarea rows="7" cols="50" maxlength="200" autofocus="autofocus" name="httext" required="required" id="httext"></textarea></td></tr>
+<tr><td><textarea rows="7" cols="50" maxlength="200" autofocus="autofocus" name="httext" required="required" id="httext" class="textui"></textarea></td></tr>
 <tr>
 <td><input type="image" src="images/clicknext.png" class="next" /></td>
 <td><h5 class="textclick">choose again?</h5></td>

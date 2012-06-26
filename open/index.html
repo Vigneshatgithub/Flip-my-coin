@@ -1,0 +1,28 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="openstyle.css" />
+<script type="text/javascript">
+$(document).ready(function(){
+$(".nav").click(function(){
+alert(this.id);
+});
+});
+</script>
+</head>
+<body>
+<div class="flip-open-menu">
+<ul class="nav nav-pills">
+	<li id="a1" >
+		<a href="#"><h3>Topic of the day</h3></a>
+	</li>
+	<li id="a2" class="active">
+		<a href="#"><h3>Most Popular</h3></a>
+	</li>
+	<li id="a3" >
+		<a href="#"><h3>Most Recent</h3></a>
+	</li>
+</ul>
+</div>
+</body>
+</html>
