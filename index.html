@@ -21,19 +21,23 @@ $(".siteinfo").mouseover(function(){
 			//alert(this.id);			
 			if(this.id=="info1")
 			{
-			 document.getElementById("siteinfotxt").innerHTML=info1;			 
+			 //document.getElementById("siteinfotxt").innerHTML=info1;			 
+			 assignContent("siteinfotxt",info1);
 			}
 			if(this.id=="info2")
 			{
-			 document.getElementById("siteinfotxt").innerHTML=info2;
+			 //document.getElementById("siteinfotxt").innerHTML=info2;
+			 assignContent("siteinfotxt",info2);
 			}
 			if(this.id=="info3")
 			{
-			 document.getElementById("siteinfotxt").innerHTML=info3;
+			 //document.getElementById("siteinfotxt").innerHTML=info3;
+			 assignContent("siteinfotxt",info3);
 			}
 			if(this.id=="info4")
 			{
-			 document.getElementById("siteinfotxt").innerHTML=info4;
+			 //document.getElementById("siteinfotxt").innerHTML=info4;
+			 assignContent("siteinfotxt",info4);
 			}
 		});
 		
@@ -42,50 +46,58 @@ $(".siteinfo").mouseover(function(){
 		});
 
 $("#scr1").click(function(){
-		var mindtext=document.getElementById("mindtext").value;
+		var mindtext=$("#mindtext").val();
 		if(mindtext!="")
 		{
 			$("div.ht").css("visibility","visible");
 			$("div.dynamic").css("visibility","hidden");
 			$("div.design-straight").css("visibility","hidden");
-			document.getElementById("dis2").innerHTML=mindtext;
+			//document.getElementById("dis2").innerHTML=mindtext;
+			assignContent("dis2",mindtext);
 		}
 	});
 
-$("h1#chead").click(function(){    		
+$("#chead").click(function(){    		
 	$("div.design-straight").css("visibility","visible");
     $("div.httext").css("visibility","visible");
-	document.getElementById('httext').focus();
+	$('#httext').focus();
     $("div.ht").css("visibility","hidden");
-	document.getElementById("userchosen").innerHTML=msg+"Heads";
-	document.getElementById("ucid").value="Heads";
-	document.getElementById("dis3").innerHTML="Heads";
+	//document.getElementById("userchosen").innerHTML=msg+"Heads";
+	//document.getElementById("ucid").value="Heads";
+	//document.getElementById("dis3").innerHTML="Heads";
+	assignContent("userchosen",msg+"Heads");
+	assignContent("ucid","Heads");
+	assignContent("dis3","Heads");
   });
 
-$("h1#ctail").click(function(){    	
+$("#ctail").click(function(){    	
 	$("div.design-straight").css("visibility","visible");
     $("div.httext").css("visibility","visible");    
-	document.getElementById('httext').focus();
+	$('#httext').focus();
     $("div.ht").css("visibility","hidden");
-	document.getElementById("userchosen").innerHTML=msg+"Tails";
-	document.getElementById("ucid").value="Tails";
-	document.getElementById("dis3").innerHTML="Tails";
+	//document.getElementById("userchosen").innerHTML=msg+"Tails";
+	//document.getElementById("ucid").value="Tails";
+	//document.getElementById("dis3").innerHTML="Tails";
+	assignContent("userchosen",msg+"Tails");
+	assignContent("ucid","Tails");
+	assignContent("dis3","Tails");
   });
 
-$("h5#clickable").click(function(){    
+$("#clickable").click(function(){    
     $("div.httext").css("visibility","hidden");
     $("div.ht").css("visibility","visible");	
     $("div.design-straight").css("visibility","hidden");    
   });
 
 $("#scr2").click(function(){
-var httext=document.getElementById("httext").value;
+var httext=$("#httext").val();
 	if(httext!="")
 	{
 		$("div.intheair").css("visibility","visible");
 		$("div.httext").css("visibility","hidden");
 		$("div.design-straight").css("visibility","hidden");
-		document.getElementById("dis4").innerHTML=httext;
+		//document.getElementById("dis4").innerHTML=httext;
+		assignContent("dis4",httext);
 	}
 });
 
@@ -99,17 +111,24 @@ $("div.intheair").click(function(){
 	if(rand==0)
 	{
 		//alert("inside 0");
-		document.getElementById("dis1").innerHTML="Heads";
+		//document.getElementById("dis1").innerHTML="Heads";
 		//alert(document.getElementById("dis1").innerHTML);
+		assignContent("dis1","Heads");
 	}
 	else
 	{
 		//alert("inside 1");
-		document.getElementById("dis1").innerHTML="Tails";
+		//document.getElementById("dis1").innerHTML="Tails";
+		assignContent("dis1","Tails");
 	}	
 	//document.getElementById("dis2").innerHTML=mindtext;
 });
 
+function assignContent(id,data)
+{
+id='#'+id;
+$(id).html(data);
+}
 
 });
 
